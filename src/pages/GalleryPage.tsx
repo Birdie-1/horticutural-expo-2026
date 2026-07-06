@@ -9,16 +9,16 @@ const mockImages: GalleryImage[] = Array.from({ length: 12 }).map((_, i) => {
   
   // Real images from generation
   const realImages = [
-    '/images/hero_home_1783225564522.jpg',
+    '/images/hero_home_real_1783313355094.jpg',
     '/images/hero_about_1783226591930.jpg',
-    '/images/hero_exhibition_1783226605062.jpg',
+    '/images/hero_exhibition_real_1783313395889.jpg',
     '/images/hero_gallery_1783226617059.jpg',
-    '/images/hero_map_1783226633929.jpg',
+    '/images/hero_map_real_1783313363882.jpg',
     '/images/zone_royal_1783225575801.jpg',
-    '/images/zone_tropical_1783225587369.jpg',
+    '/images/zone_cactus_real_1783313373299.jpg',
     '/images/zone_future_1783226646480.jpg',
     '/images/zone_cultural_1783226656775.jpg',
-    '/images/zone_children_1783226672310.jpg',
+    '/images/zone_dino_real_1783313386013.jpg',
     '/images/zone_night_1783226685334.jpg'
   ];
   const imageSrc = realImages[i % realImages.length]!;

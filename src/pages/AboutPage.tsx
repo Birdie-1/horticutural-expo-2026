@@ -109,13 +109,9 @@ export default function AboutPage() {
               </div>
             </div>
             
-            <div className="scroll-animate-right relative h-[500px] rounded-2xl overflow-hidden glass-card">
-              <div className="absolute inset-0 bg-gradient-to-tr from-gold-900/20 to-transparent" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                 <div className="w-32 h-32 rounded-full border border-gold-500/30 flex items-center justify-center">
-                    <span className="font-display text-4xl text-gold-400 opacity-50">H</span>
-                 </div>
-              </div>
+            <div className="scroll-animate-right relative h-[500px] rounded-2xl overflow-hidden glass-card p-0">
+              <img src="/images/history_about_1783312086157.jpg" alt="Udon Thani History" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark-900/80 via-transparent to-transparent" />
             </div>
           </div>
         </div>

@@ -22,7 +22,7 @@ export default function MapPage() {
       {/* Sub-hero */}
       <section className="sub-hero">
         <div className="sub-hero-bg bg-dark-950">
-           <img src="/images/hero_map_1783226633929.jpg" alt="Map" className="absolute inset-0 w-full h-full object-cover opacity-40" />
+           <img src="/images/hero_map_real_1783313363882.jpg" alt="Map" className="absolute inset-0 w-full h-full object-cover opacity-40" />
            <div className="absolute inset-0 bg-dark-900/40" />
         </div>
         <div ref={heroRef} className="scroll-animate relative z-10 px-4">

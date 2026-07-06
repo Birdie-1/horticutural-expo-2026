@@ -22,7 +22,7 @@ export default function ExhibitionPage() {
       {/* Sub-hero */}
       <section className="sub-hero">
         <div className="sub-hero-bg bg-dark-950">
-           <img src="/images/hero_exhibition_1783226605062.jpg" alt="Exhibition" className="absolute inset-0 w-full h-full object-cover opacity-50" />
+           <img src="/images/hero_exhibition_real_1783313395889.jpg" alt="Exhibition" className="absolute inset-0 w-full h-full object-cover opacity-50" />
            <div className="absolute inset-0 bg-dark-900/40" />
         </div>
         <div ref={heroRef} className="scroll-animate relative z-10 px-4">
@@ -63,10 +63,10 @@ export default function ExhibitionPage() {
                     <img 
                       src={
                         zone.id === 1 ? "/images/zone_royal_1783225575801.jpg" :
-                        zone.id === 2 ? "/images/zone_tropical_1783225587369.jpg" :
+                        zone.id === 2 ? "/images/zone_cactus_real_1783313373299.jpg" :
                         zone.id === 3 ? "/images/zone_future_1783226646480.jpg" :
                         zone.id === 4 ? "/images/zone_cultural_1783226656775.jpg" :
-                        zone.id === 5 ? "/images/zone_children_1783226672310.jpg" :
+                        zone.id === 5 ? "/images/zone_dino_real_1783313386013.jpg" :
                         "/images/zone_night_1783226685334.jpg"
                       }
                       alt="Zone"
