@@ -79,7 +79,7 @@ export default function AboutPage() {
       {/* Sub-hero */}
       <section className="sub-hero">
         <div className="sub-hero-bg bg-dark-950">
-           <img src="/images/hero_about_1783226591930.jpg" alt="About" className="absolute inset-0 w-full h-full object-cover opacity-40" />
+           <img src="images/hero_about_1783226591930.jpg" alt="About" className="absolute inset-0 w-full h-full object-cover opacity-40" />
            <div className="absolute inset-0 bg-dark-900/40" />
         </div>
         <div ref={heroRef} className="scroll-animate relative z-10 px-4">
@@ -110,7 +110,7 @@ export default function AboutPage() {
             </div>
             
             <div className="scroll-animate-right relative h-[500px] rounded-2xl overflow-hidden glass-card p-0">
-              <img src="/images/history_about_1783312086157.jpg" alt="Udon Thani History" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+              <img src="images/history_about_1783312086157.jpg" alt="Udon Thani History" className="absolute inset-0 w-full h-full object-cover opacity-80" />
               <div className="absolute inset-0 bg-gradient-to-t from-dark-900/80 via-transparent to-transparent" />
             </div>
           </div>

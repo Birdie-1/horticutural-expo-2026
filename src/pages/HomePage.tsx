@@ -42,7 +42,7 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background image */}
         <div className="absolute inset-0 bg-dark-950">
-          <img src="/images/hero_home_real_1783313355094.jpg" alt="Horticultural Expo" className="absolute inset-0 w-full h-full object-cover opacity-50" />
+          <img src="images/hero_home_real_1783313355094.jpg" alt="Horticultural Expo" className="absolute inset-0 w-full h-full object-cover opacity-50" />
           {/* Decorative elements */}
           <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gold-500/5 blur-3xl" />
           <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-gold-600/5 blur-3xl" />
@@ -142,12 +142,12 @@ export default function HomePage() {
                   <div className="relative h-56 overflow-hidden">
                     <img 
                       src={
-                        zone.id === 1 ? "/images/zone_royal_1783225575801.jpg" :
-                        zone.id === 2 ? "/images/zone_cactus_real_1783313373299.jpg" :
-                        zone.id === 3 ? "/images/zone_future_1783226646480.jpg" :
-                        zone.id === 4 ? "/images/zone_cultural_1783226656775.jpg" :
-                        zone.id === 5 ? "/images/zone_dino_real_1783313386013.jpg" :
-                        "/images/zone_night_1783226685334.jpg"
+                        zone.id === 1 ? "images/zone_royal_1783225575801.jpg" :
+                        zone.id === 2 ? "images/zone_cactus_real_1783313373299.jpg" :
+                        zone.id === 3 ? "images/zone_future_1783226646480.jpg" :
+                        zone.id === 4 ? "images/zone_cultural_1783226656775.jpg" :
+                        zone.id === 5 ? "images/zone_dino_real_1783313386013.jpg" :
+                        "images/zone_night_1783226685334.jpg"
                       } 
                       alt="Zone" 
                       className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" 
@@ -204,11 +204,11 @@ export default function HomePage() {
               >
                 <img 
                   src={
-                    index === 0 ? "/images/hero_exhibition_real_1783313395889.jpg" :
-                    index === 1 ? "/images/zone_royal_1783225575801.jpg" :
-                    index === 2 ? "/images/zone_night_1783226685334.jpg" :
-                    index === 3 ? "/images/zone_future_1783226646480.jpg" :
-                    "/images/zone_dino_real_1783313386013.jpg"
+                    index === 0 ? "images/hero_exhibition_real_1783313395889.jpg" :
+                    index === 1 ? "images/zone_royal_1783225575801.jpg" :
+                    index === 2 ? "images/zone_night_1783226685334.jpg" :
+                    index === 3 ? "images/zone_future_1783226646480.jpg" :
+                    "images/zone_dino_real_1783313386013.jpg"
                   } 
                   alt="Gallery Item" 
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 

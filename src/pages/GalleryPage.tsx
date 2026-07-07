@@ -9,17 +9,17 @@ const mockImages: GalleryImage[] = Array.from({ length: 12 }).map((_, i) => {
   
   // Real images from generation
   const realImages = [
-    '/images/hero_home_real_1783313355094.jpg',
-    '/images/hero_about_1783226591930.jpg',
-    '/images/hero_exhibition_real_1783313395889.jpg',
-    '/images/hero_gallery_1783226617059.jpg',
-    '/images/hero_map_real_1783313363882.jpg',
-    '/images/zone_royal_1783225575801.jpg',
-    '/images/zone_cactus_real_1783313373299.jpg',
-    '/images/zone_future_1783226646480.jpg',
-    '/images/zone_cultural_1783226656775.jpg',
-    '/images/zone_dino_real_1783313386013.jpg',
-    '/images/zone_night_1783226685334.jpg'
+    'images/hero_home_real_1783313355094.jpg',
+    'images/hero_about_1783226591930.jpg',
+    'images/hero_exhibition_real_1783313395889.jpg',
+    'images/hero_gallery_1783226617059.jpg',
+    'images/hero_map_real_1783313363882.jpg',
+    'images/zone_royal_1783225575801.jpg',
+    'images/zone_cactus_real_1783313373299.jpg',
+    'images/zone_future_1783226646480.jpg',
+    'images/zone_cultural_1783226656775.jpg',
+    'images/zone_dino_real_1783313386013.jpg',
+    'images/zone_night_1783226685334.jpg'
   ];
   const imageSrc = realImages[i % realImages.length]!;
 
@@ -79,7 +79,7 @@ export default function GalleryPage() {
       {/* Sub-hero */}
       <section className="sub-hero">
         <div className="sub-hero-bg bg-dark-950">
-           <img src="/images/hero_gallery_1783226617059.jpg" alt="Gallery" className="absolute inset-0 w-full h-full object-cover opacity-50" />
+           <img src="images/hero_gallery_1783226617059.jpg" alt="Gallery" className="absolute inset-0 w-full h-full object-cover opacity-50" />
            <div className="absolute inset-0 bg-dark-900/40" />
         </div>
         <div ref={heroRef} className="scroll-animate relative z-10 px-4">
