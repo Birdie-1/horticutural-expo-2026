@@ -38,7 +38,7 @@ export default function MapPage() {
             
             {/* Map Embed - OpenStreetMap */}
             <div ref={mapRef} className="scroll-animate w-full h-[600px] rounded-2xl overflow-hidden border border-gold-500/20 glass-card p-2 relative group">
-               {/* Note: Udon Thani Nong Dae coordinates approx 17.4475, 102.7933 */}
+               {/* Note: Udon Thani Nong Dae exact coordinates 17°27'30.6"N 102°47'59.1"E */}
                <iframe 
                  width="100%" 
                  height="100%" 
@@ -46,7 +46,7 @@ export default function MapPage() {
                  scrolling="no" 
                  marginHeight={0} 
                  marginWidth={0} 
-                 src="https://maps.google.com/maps?q=17.4475,102.7933&z=15&output=embed"
+                 src="https://maps.google.com/maps?q=17.4585,102.79975&z=15&output=embed"
                  className="rounded-xl transition-all duration-700 shadow-xl shadow-black/20"
                />
             </div>
