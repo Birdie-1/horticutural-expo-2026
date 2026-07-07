@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useScrollAnimation, useScrollAnimationMultiple } from '@/hooks/useScrollAnimation';
 import SectionHeader from '@/components/ui/SectionHeader';
-import type { TicketTier, TransportMode, FAQItem } from '@/types';
+import type { TransportMode, FAQItem } from '@/types';
 
 export default function AboutPage() {
   const { t } = useLanguage();
@@ -12,29 +12,7 @@ export default function AboutPage() {
   const travelRef = useScrollAnimationMultiple();
   const faqRef = useScrollAnimationMultiple();
 
-  const tickets: TicketTier[] = [
-    {
-      nameKey: 'ticketAdult',
-      priceKey: 'ticketAdultPrice',
-      featuresKeys: ['ticketFeature1', 'ticketFeature2', 'ticketFeature3']
-    },
-    {
-      nameKey: 'ticketChild',
-      priceKey: 'ticketChildPrice',
-      featuresKeys: ['ticketFeature1', 'ticketFeature2', 'ticketFeature3']
-    },
-    {
-      nameKey: 'ticketGroup',
-      priceKey: 'ticketGroupPrice',
-      featuresKeys: ['ticketFeature1', 'ticketFeature2', 'ticketFeature3']
-    },
-    {
-      nameKey: 'ticketVip',
-      priceKey: 'ticketVipPrice',
-      featuresKeys: ['ticketFeature1', 'ticketFeatureVip1', 'ticketFeatureVip2', 'ticketFeatureVip3'],
-      highlighted: true
-    }
-  ];
+
 
   const travelModes: TransportMode[] = [
     { 
@@ -128,53 +106,88 @@ export default function AboutPage() {
             subtitle={t.about.ticketsSubtitle}
           />
           
-          <div ref={ticketsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
-            {tickets.map((ticket, idx) => (
-              <div 
-                key={ticket.nameKey}
-                className={`scroll-animate relative rounded-2xl p-8 transition-all duration-500 ${
-                  ticket.highlighted 
-                    ? 'bg-gradient-to-b from-dark-800 to-dark-900 border border-gold-500/50 shadow-lg shadow-gold-500/10 -translate-y-4' 
-                    : 'bg-dark-800/50 border border-dark-700 hover:border-gold-500/30'
-                }`}
-                style={{ transitionDelay: `${idx * 100}ms` }}
-              >
-                {ticket.highlighted && (
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-gold-600 to-gold-400 text-dark-900 text-xs font-bold uppercase tracking-wider py-1 px-4 rounded-full">
-                    Recommended
-                  </div>
-                )}
-                
-                <h3 className="font-display text-xl text-dark-50 mb-2">
-                  {t.about[ticket.nameKey as keyof typeof t.about]}
-                </h3>
-                <div className="flex items-baseline gap-1 mb-6 text-gold-400">
-                  <span className="text-3xl font-bold font-display">฿</span>
-                  <span className="text-4xl font-bold font-display tracking-tight">
-                    {t.about[ticket.priceKey as keyof typeof t.about]}
-                  </span>
-                </div>
-                
-                <div className="space-y-4 mb-8">
-                  {ticket.featuresKeys.map(feature => (
-                    <div key={feature} className="flex gap-3 text-sm text-dark-300">
-                      <svg className="w-5 h-5 text-gold-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span>{t.about[feature as keyof typeof t.about]}</span>
-                    </div>
-                  ))}
-                </div>
-                
-                <button className={`w-full py-3 rounded-lg font-medium transition-colors ${
-                  ticket.highlighted 
-                    ? 'bg-gold-500 text-dark-900 hover:bg-gold-400' 
-                    : 'bg-dark-700 text-dark-100 hover:bg-dark-600'
-                }`}>
-                  Buy Ticket
-                </button>
+          <div ref={ticketsRef} className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-16">
+            {/* 1-Day Pass */}
+            <div className="scroll-animate relative rounded-2xl p-8 bg-dark-800/50 border border-dark-700 hover:border-gold-500/30 transition-all duration-500">
+              <h3 className="font-display text-2xl text-gold-400 mb-6">🎟️ อัตราค่าเข้าชมรายวัน (1-Day Pass)</h3>
+              
+              <div className="mb-6">
+                <h4 className="font-bold text-dark-50 mb-3 flex items-center gap-2">✅ บัตรมาตรฐาน (Standard)</h4>
+                <ul className="space-y-3 text-dark-300 text-sm">
+                  <li className="flex justify-between items-center border-b border-dark-700/50 pb-2"><span>บุคคลทั่วไป:</span> <span className="text-dark-50 font-medium">350 บาท</span></li>
+                  <li className="flex justify-between items-center border-b border-dark-700/50 pb-2"><span>นักเรียน:</span> <span className="text-dark-50 font-medium">180 บาท</span></li>
+                  <li className="flex justify-between items-center border-b border-dark-700/50 pb-2"><span>ผู้สูงอายุ/ผู้มีปัญหาสุขภาพ:</span> <span className="text-dark-50 font-medium">120 บาท</span></li>
+                </ul>
               </div>
-            ))}
+              
+              <div className="mb-6">
+                <h4 className="font-bold text-dark-50 mb-3 flex items-center gap-2">⭐ บัตรเฉพาะกลุ่ม (Designated)</h4>
+                <ul className="space-y-3 text-dark-300 text-sm">
+                  <li className="flex justify-between items-center border-b border-dark-700/50 pb-2"><span>บุคคลทั่วไป:</span> <span className="text-dark-50 font-medium">500 บาท</span></li>
+                  <li className="flex justify-between items-center border-b border-dark-700/50 pb-2"><span>นักเรียน:</span> <span className="text-dark-50 font-medium">250 บาท</span></li>
+                  <li className="flex justify-between items-center border-b border-dark-700/50 pb-2"><span>ผู้สูงอายุ/ผู้มีปัญหาสุขภาพ:</span> <span className="text-dark-50 font-medium">250 บาท</span></li>
+                </ul>
+              </div>
+            </div>
+
+            {/* 3-7 Day Pass */}
+            <div className="scroll-animate relative rounded-2xl p-8 bg-dark-800/50 border border-dark-700 hover:border-gold-500/30 transition-all duration-500" style={{ transitionDelay: '100ms' }}>
+              <h3 className="font-display text-2xl text-gold-400 mb-6">🎫 บัตรหลายวัน (Multi-Day Pass)</h3>
+              
+              <div className="mb-6">
+                <h4 className="font-bold text-dark-50 mb-3 flex items-center gap-2">📌 บัตร 3 วัน (3-Day Pass)</h4>
+                <ul className="space-y-3 text-dark-300 text-sm">
+                  <li className="flex justify-between items-center border-b border-dark-700/50 pb-2"><span>บุคคลทั่วไป:</span> <span className="text-dark-50 font-medium">790 บาท</span></li>
+                  <li className="flex justify-between items-center border-b border-dark-700/50 pb-2"><span>นักเรียน:</span> <span className="text-dark-50 font-medium">410 บาท</span></li>
+                  <li className="flex justify-between items-center border-b border-dark-700/50 pb-2"><span>ผู้สูงอายุ/ผู้มีปัญหาสุขภาพ:</span> <span className="text-dark-50 font-medium">270 บาท</span></li>
+                </ul>
+              </div>
+              
+              <div className="mb-6">
+                <h4 className="font-bold text-dark-50 mb-3 flex items-center gap-2">📌 บัตร 7 วัน (7-Day Pass)</h4>
+                <ul className="space-y-3 text-dark-300 text-sm">
+                  <li className="flex justify-between items-center border-b border-dark-700/50 pb-2"><span>บุคคลทั่วไป:</span> <span className="text-dark-50 font-medium">1,840 บาท</span></li>
+                  <li className="flex justify-between items-center border-b border-dark-700/50 pb-2"><span>นักเรียน:</span> <span className="text-dark-50 font-medium">950 บาท</span></li>
+                  <li className="flex justify-between items-center border-b border-dark-700/50 pb-2"><span>ผู้สูงอายุ/ผู้มีปัญหาสุขภาพ:</span> <span className="text-dark-50 font-medium">630 บาท</span></li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Early Bird & Group */}
+            <div className="scroll-animate relative rounded-2xl p-8 bg-gradient-to-b from-dark-800 to-dark-900 border border-gold-500/50 shadow-lg shadow-gold-500/10 lg:-translate-y-4 transition-all duration-500" style={{ transitionDelay: '200ms' }}>
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-gold-600 to-gold-400 text-dark-900 text-xs font-bold uppercase tracking-wider py-1 px-4 rounded-full">
+                🔥 Hot Deal
+              </div>
+              <h3 className="font-display text-2xl text-gold-400 mb-6 mt-2">🔥 Early Bird & แบบกลุ่ม</h3>
+              
+              <div className="mb-6 bg-gold-500/10 p-4 rounded-xl border border-gold-500/20">
+                <h4 className="font-bold text-gold-400 mb-2">🔥 สิทธิพิเศษบัตรล่วงหน้า (Early Bird)</h4>
+                <div className="flex justify-between items-end mb-2">
+                  <span className="text-dark-100 text-sm">ราคาพิเศษ (ทุกกลุ่ม):</span> 
+                  <span className="text-gold-400 font-bold text-2xl">120 บาท</span>
+                </div>
+                <div className="text-xs text-gold-500/80 bg-dark-900/50 p-2 rounded inline-block w-full text-center">
+                  * 1 พฤษภาคม – 30 กันยายน 2569
+                </div>
+              </div>
+              
+              <div>
+                <h4 className="font-bold text-dark-50 mb-3 flex items-center gap-2">👥 อัตราค่าเข้าชมแบบกลุ่ม</h4>
+                <ul className="space-y-2 text-dark-300 text-xs">
+                  <li className="text-gold-400/80 mb-1 mt-3">🏢 กลุ่มองค์กร</li>
+                  <li className="flex justify-between items-center"><span>15–50 คน:</span> <span className="text-dark-50">270 บ./คน</span></li>
+                  <li className="flex justify-between items-center"><span>51–100 คน:</span> <span className="text-dark-50">250 บ./คน</span></li>
+                  <li className="flex justify-between items-center"><span>101–200 คน:</span> <span className="text-dark-50">230 บ./คน</span></li>
+                  <li className="flex justify-between items-center"><span>201 คนขึ้นไป:</span> <span className="text-dark-50">210 บ./คน</span></li>
+                  
+                  <li className="text-gold-400/80 mb-1 mt-4">🏫 สถานศึกษา</li>
+                  <li className="flex justify-between items-center"><span>15–50 คน:</span> <span className="text-dark-50">135 บ./คน</span></li>
+                  <li className="flex justify-between items-center"><span>51–100 คน:</span> <span className="text-dark-50">125 บ./คน</span></li>
+                  <li className="flex justify-between items-center"><span>101–200 คน:</span> <span className="text-dark-50">120 บ./คน</span></li>
+                  <li className="flex justify-between items-center"><span>201 คนขึ้นไป:</span> <span className="text-dark-50">110 บ./คน</span></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
