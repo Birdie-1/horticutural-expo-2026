@@ -2,15 +2,6 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { useScrollAnimation, useScrollAnimationMultiple } from '@/hooks/useScrollAnimation';
 import SectionHeader from '@/components/ui/SectionHeader';
 
-const mapLegend = [
-  { id: 1, color: 'bg-yellow-500', nameKey: 'zone1Name', descKey: 'zone1Desc' },
-  { id: 2, color: 'bg-emerald-500', nameKey: 'zone2Name', descKey: 'zone2Desc' },
-  { id: 3, color: 'bg-blue-500', nameKey: 'zone3Name', descKey: 'zone3Desc' },
-  { id: 4, color: 'bg-orange-500', nameKey: 'zone4Name', descKey: 'zone4Desc' },
-  { id: 5, color: 'bg-pink-500', nameKey: 'zone5Name', descKey: 'zone5Desc' },
-  { id: 6, color: 'bg-purple-500', nameKey: 'zone6Name', descKey: 'zone6Desc' },
-];
-
 export default function MapPage() {
   const { t } = useLanguage();
   const heroRef = useScrollAnimation();
@@ -43,10 +34,10 @@ export default function MapPage() {
             title={t.map.mapTitle}
           />
           
-          <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+          <div className="mt-12">
             
             {/* Map Embed - OpenStreetMap */}
-            <div ref={mapRef} className="scroll-animate lg:col-span-2 h-[600px] rounded-2xl overflow-hidden border border-gold-500/20 glass-card p-2 relative group">
+            <div ref={mapRef} className="scroll-animate w-full h-[600px] rounded-2xl overflow-hidden border border-gold-500/20 glass-card p-2 relative group">
                {/* Note: Udon Thani Nong Dae coordinates approx 17.4475, 102.7933 */}
                <iframe 
                  width="100%" 
@@ -58,29 +49,6 @@ export default function MapPage() {
                  src="https://maps.google.com/maps?q=17.4475,102.7933&z=15&output=embed"
                  className="rounded-xl transition-all duration-700 shadow-xl shadow-black/20"
                />
-            </div>
-
-            {/* Legend */}
-            <div className="card-luxury h-full">
-              <span className="eyebrow">{t.map.legendEyebrow}</span>
-              <h3 className="font-display text-2xl font-bold text-gold-400 mt-2 mb-6">{t.map.legendTitle}</h3>
-              <div className="gold-line" />
-              
-              <div className="space-y-6 mt-6">
-                {mapLegend.map((item) => (
-                  <div key={item.id} className="flex gap-4">
-                    <div className={`w-4 h-4 rounded-full mt-1 flex-shrink-0 shadow-lg shadow-${item.color}/50 ${item.color}`} />
-                    <div>
-                      <h4 className="font-display font-semibold text-dark-50">
-                        {t.zones[item.nameKey as keyof typeof t.zones]}
-                      </h4>
-                      <p className="text-sm text-dark-300 mt-1">
-                        {t.zones[item.descKey as keyof typeof t.zones]}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
 
           </div>
