@@ -113,10 +113,20 @@ export default function AboutPage() {
           <div ref={ticketsRef} className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-16">
             {/* 1-Day Pass */}
             <div className="scroll-animate relative rounded-2xl p-8 bg-dark-800/50 border border-dark-700 hover:border-gold-500/30 transition-all duration-500">
-              <h3 className="font-display text-2xl text-gold-400 mb-6">🎟️ อัตราค่าเข้าชมรายวัน (1-Day Pass)</h3>
+              <h3 className="font-display text-2xl text-gold-400 mb-6 flex items-center gap-3">
+                <svg className="w-6 h-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 010 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 010-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375z" />
+                </svg>
+                อัตราค่าเข้าชมรายวัน (1-Day Pass)
+              </h3>
               
               <div className="mb-6">
-                <h4 className="font-bold text-dark-50 mb-3 flex items-center gap-2">✅ บัตรมาตรฐาน (Standard)</h4>
+                <h4 className="font-bold text-dark-50 mb-3 flex items-center gap-2">
+                  <svg className="w-5 h-5 text-gold-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                  บัตรมาตรฐาน (Standard)
+                </h4>
                 <ul className="space-y-3 text-dark-300 text-sm">
                   <li className="flex justify-between items-center border-b border-dark-700/50 pb-2"><span>บุคคลทั่วไป:</span> <span className="text-dark-50 font-medium">350 บาท</span></li>
                   <li className="flex justify-between items-center border-b border-dark-700/50 pb-2"><span>นักเรียน:</span> <span className="text-dark-50 font-medium">180 บาท</span></li>
@@ -125,7 +135,12 @@ export default function AboutPage() {
               </div>
               
               <div className="mb-6">
-                <h4 className="font-bold text-dark-50 mb-3 flex items-center gap-2">⭐ บัตรเฉพาะกลุ่ม (Designated)</h4>
+                <h4 className="font-bold text-dark-50 mb-3 flex items-center gap-2">
+                  <svg className="w-5 h-5 text-gold-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                  </svg>
+                  บัตรเฉพาะกลุ่ม (Designated)
+                </h4>
                 <ul className="space-y-3 text-dark-300 text-sm">
                   <li className="flex justify-between items-center border-b border-dark-700/50 pb-2"><span>บุคคลทั่วไป:</span> <span className="text-dark-50 font-medium">500 บาท</span></li>
                   <li className="flex justify-between items-center border-b border-dark-700/50 pb-2"><span>นักเรียน:</span> <span className="text-dark-50 font-medium">250 บาท</span></li>
@@ -136,10 +151,20 @@ export default function AboutPage() {
 
             {/* 3-7 Day Pass */}
             <div className="scroll-animate relative rounded-2xl p-8 bg-dark-800/50 border border-dark-700 hover:border-gold-500/30 transition-all duration-500" style={{ transitionDelay: '100ms' }}>
-              <h3 className="font-display text-2xl text-gold-400 mb-6">🎫 บัตรหลายวัน (Multi-Day Pass)</h3>
+              <h3 className="font-display text-2xl text-gold-400 mb-6 flex items-center gap-3">
+                <svg className="w-6 h-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
+                </svg>
+                บัตรหลายวัน (Multi-Day Pass)
+              </h3>
               
               <div className="mb-6">
-                <h4 className="font-bold text-dark-50 mb-3 flex items-center gap-2">📌 บัตร 3 วัน (3-Day Pass)</h4>
+                <h4 className="font-bold text-dark-50 mb-3 flex items-center gap-2">
+                  <svg className="w-5 h-5 text-gold-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                  </svg>
+                  บัตร 3 วัน (3-Day Pass)
+                </h4>
                 <ul className="space-y-3 text-dark-300 text-sm">
                   <li className="flex justify-between items-center border-b border-dark-700/50 pb-2"><span>บุคคลทั่วไป:</span> <span className="text-dark-50 font-medium">790 บาท</span></li>
                   <li className="flex justify-between items-center border-b border-dark-700/50 pb-2"><span>นักเรียน:</span> <span className="text-dark-50 font-medium">410 บาท</span></li>
@@ -148,7 +173,12 @@ export default function AboutPage() {
               </div>
               
               <div className="mb-6">
-                <h4 className="font-bold text-dark-50 mb-3 flex items-center gap-2">📌 บัตร 7 วัน (7-Day Pass)</h4>
+                <h4 className="font-bold text-dark-50 mb-3 flex items-center gap-2">
+                  <svg className="w-5 h-5 text-gold-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                  </svg>
+                  บัตร 7 วัน (7-Day Pass)
+                </h4>
                 <ul className="space-y-3 text-dark-300 text-sm">
                   <li className="flex justify-between items-center border-b border-dark-700/50 pb-2"><span>บุคคลทั่วไป:</span> <span className="text-dark-50 font-medium">1,840 บาท</span></li>
                   <li className="flex justify-between items-center border-b border-dark-700/50 pb-2"><span>นักเรียน:</span> <span className="text-dark-50 font-medium">950 บาท</span></li>
@@ -159,13 +189,25 @@ export default function AboutPage() {
 
             {/* Early Bird & Group */}
             <div className="scroll-animate relative rounded-2xl p-8 bg-gradient-to-b from-dark-800 to-dark-900 border border-gold-500/50 shadow-lg shadow-gold-500/10 lg:-translate-y-4 transition-all duration-500" style={{ transitionDelay: '200ms' }}>
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-gold-600 to-gold-400 text-dark-900 text-xs font-bold uppercase tracking-wider py-1 px-4 rounded-full">
-                🔥 Hot Deal
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-gold-600 to-gold-400 text-dark-900 text-xs font-bold flex items-center gap-1 uppercase tracking-wider py-1 px-4 rounded-full">
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z" />
+                </svg>
+                Hot Deal
               </div>
-              <h3 className="font-display text-2xl text-gold-400 mb-6 mt-2">🔥 Early Bird & แบบกลุ่ม</h3>
+              <h3 className="font-display text-2xl text-gold-400 mb-6 mt-2 flex items-center gap-3">
+                <svg className="w-6 h-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z" />
+                </svg>
+                Early Bird & แบบกลุ่ม
+              </h3>
               
               <div className="mb-6 bg-gold-500/10 p-4 rounded-xl border border-gold-500/20">
-                <h4 className="font-bold text-gold-400 mb-2">🔥 สิทธิพิเศษบัตรล่วงหน้า (Early Bird)</h4>
+                <h4 className="font-bold text-gold-400 mb-2 flex items-center gap-2">
+                  สิทธิพิเศษบัตรล่วงหน้า (Early Bird)
+                </h4>
                 <div className="flex justify-between items-end mb-2">
                   <span className="text-dark-100 text-sm">ราคาพิเศษ (ทุกกลุ่ม):</span> 
                   <span className="text-gold-400 font-bold text-2xl">120 บาท</span>
@@ -176,19 +218,34 @@ export default function AboutPage() {
               </div>
               
               <div>
-                <h4 className="font-bold text-dark-50 mb-3 flex items-center gap-2">👥 อัตราค่าเข้าชมแบบกลุ่ม</h4>
+                <h4 className="font-bold text-dark-50 mb-3 flex items-center gap-2">
+                  <svg className="w-5 h-5 text-gold-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                  </svg>
+                  อัตราค่าเข้าชมแบบกลุ่ม
+                </h4>
                 <ul className="space-y-2 text-dark-300 text-xs">
-                  <li className="text-gold-400/80 mb-1 mt-3">🏢 กลุ่มองค์กร</li>
-                  <li className="flex justify-between items-center"><span>15–50 คน:</span> <span className="text-dark-50">270 บ./คน</span></li>
-                  <li className="flex justify-between items-center"><span>51–100 คน:</span> <span className="text-dark-50">250 บ./คน</span></li>
-                  <li className="flex justify-between items-center"><span>101–200 คน:</span> <span className="text-dark-50">230 บ./คน</span></li>
-                  <li className="flex justify-between items-center"><span>201 คนขึ้นไป:</span> <span className="text-dark-50">210 บ./คน</span></li>
+                  <li className="text-gold-400/80 mb-1 mt-3 flex items-center gap-1.5">
+                    <svg className="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
+                    </svg>
+                    กลุ่มองค์กร
+                  </li>
+                  <li className="flex justify-between items-center pl-5"><span>15–50 คน:</span> <span className="text-dark-50">270 บ./คน</span></li>
+                  <li className="flex justify-between items-center pl-5"><span>51–100 คน:</span> <span className="text-dark-50">250 บ./คน</span></li>
+                  <li className="flex justify-between items-center pl-5"><span>101–200 คน:</span> <span className="text-dark-50">230 บ./คน</span></li>
+                  <li className="flex justify-between items-center pl-5"><span>201 คนขึ้นไป:</span> <span className="text-dark-50">210 บ./คน</span></li>
                   
-                  <li className="text-gold-400/80 mb-1 mt-4">🏫 สถานศึกษา</li>
-                  <li className="flex justify-between items-center"><span>15–50 คน:</span> <span className="text-dark-50">135 บ./คน</span></li>
-                  <li className="flex justify-between items-center"><span>51–100 คน:</span> <span className="text-dark-50">125 บ./คน</span></li>
-                  <li className="flex justify-between items-center"><span>101–200 คน:</span> <span className="text-dark-50">120 บ./คน</span></li>
-                  <li className="flex justify-between items-center"><span>201 คนขึ้นไป:</span> <span className="text-dark-50">110 บ./คน</span></li>
+                  <li className="text-gold-400/80 mb-1 mt-4 flex items-center gap-1.5">
+                    <svg className="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+                    </svg>
+                    สถานศึกษา
+                  </li>
+                  <li className="flex justify-between items-center pl-5"><span>15–50 คน:</span> <span className="text-dark-50">135 บ./คน</span></li>
+                  <li className="flex justify-between items-center pl-5"><span>51–100 คน:</span> <span className="text-dark-50">125 บ./คน</span></li>
+                  <li className="flex justify-between items-center pl-5"><span>101–200 คน:</span> <span className="text-dark-50">120 บ./คน</span></li>
+                  <li className="flex justify-between items-center pl-5"><span>201 คนขึ้นไป:</span> <span className="text-dark-50">110 บ./คน</span></li>
                 </ul>
               </div>
             </div>
