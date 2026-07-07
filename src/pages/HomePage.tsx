@@ -3,6 +3,7 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { useScrollAnimation, useScrollAnimationMultiple } from '@/hooks/useScrollAnimation';
 import CountdownTimer from '@/components/ui/CountdownTimer';
 import SectionHeader from '@/components/ui/SectionHeader';
+import FloatingParticles from '@/components/ui/FloatingParticles';
 
 const zoneData = [
   { id: 1, color: 'from-yellow-600 to-amber-800', borderColor: 'border-yellow-500/30', iconBg: 'bg-yellow-500/20', icon: '👑' },
@@ -41,7 +42,7 @@ export default function HomePage() {
       {/* ===== HERO SECTION ===== */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background image */}
-        <div className="absolute inset-0 bg-dark-950">
+        <div className="absolute inset-0 bg-dark-950 bg-fixed">
           <img src="images/hero_home_real_1783313355094.jpg" alt="Horticultural Expo" className="absolute inset-0 w-full h-full object-cover opacity-50" />
           {/* Decorative elements */}
           <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gold-500/5 blur-3xl" />
@@ -49,9 +50,10 @@ export default function HomePage() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gold-500/3 blur-3xl" />
         </div>
         <div className="hero-overlay" />
+        {/* Floating Particles Container */}
+        <FloatingParticles />
 
-        {/* Hero Content */}
-        <div ref={heroRef} className="scroll-animate relative z-10 text-center px-4 max-w-5xl mx-auto">
+        <div ref={heroRef} className="scroll-animate relative z-10 text-center px-4 max-w-5xl mx-auto mt-20">
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold-500/30 bg-gold-500/5 mb-8">
             <span className="w-2 h-2 rounded-full bg-gold-400 animate-pulse-gold" />
