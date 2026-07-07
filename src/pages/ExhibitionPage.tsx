@@ -154,10 +154,10 @@ export default function ExhibitionPage() {
            <span className="eyebrow">{t.exhibition.galleryEyebrow}</span>
            <h2 className="font-display text-3xl font-bold text-dark-50 mt-3 mb-10">{t.exhibition.galleryTitle}</h2>
            
-           <div className="flex justify-center gap-4 mb-10 overflow-hidden h-48 rounded-xl opacity-50">
-              <div className="w-1/3 bg-gradient-to-br from-gold-900 to-dark-900 rounded-lg"></div>
-              <div className="w-1/3 bg-gradient-to-br from-emerald-900 to-dark-900 rounded-lg"></div>
-              <div className="w-1/3 bg-gradient-to-br from-purple-900 to-dark-900 rounded-lg"></div>
+           <div className="flex justify-center gap-4 mb-10 h-48 sm:h-64 rounded-xl">
+              <img src="images/zone_royal_1783225575801.jpg" alt="Preview 1" className="w-1/3 object-cover rounded-lg shadow-lg opacity-70 hover:opacity-100 hover:scale-105 transition-all duration-500 cursor-pointer" />
+              <img src="images/zone_cactus_real_1783313373299.jpg" alt="Preview 2" className="w-1/3 object-cover rounded-lg shadow-lg opacity-70 hover:opacity-100 hover:scale-105 transition-all duration-500 cursor-pointer" />
+              <img src="images/zone_dino_real_1783313386013.jpg" alt="Preview 3" className="w-1/3 object-cover rounded-lg shadow-lg opacity-70 hover:opacity-100 hover:scale-105 transition-all duration-500 cursor-pointer" />
            </div>
            
            <Link to="/gallery" className="btn-gold">
