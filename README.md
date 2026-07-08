@@ -17,8 +17,9 @@
 - **3-Language Support**: รองรับภาษาไทย, อังกฤษ, และจีน (Simplified) พร้อมระบบบันทึกภาษาลง localStorage
 - **Scroll Reveal Animations**: แอนิเมชันเปิดตัวเนื้อหาขณะเลื่อนหน้าจอด้วย Intersection Observer
 - **Responsive Layout**: รองรับการแสดงผลทุกขนาดหน้าจอ (Mobile, Tablet, Desktop)
+- **Premium Animations & Effects**: เอฟเฟกต์ละอองแสง (Floating Particles), ตัวอักษรสะท้อนแสง (Gold Shimmer), และ Parallax Background
 - **Interactive Gallery**: ระบบแกลเลอรีแบบ Grid Masonry พร้อม Lightbox Modal
-- **Interactive Map**: แผนที่ฝังจาก OpenStreetMap แบบ Custom CSS Filter
+- **Interactive Map**: แผนที่ Google Maps Embed พร้อมพิกัดจริงของพื้นที่จัดงาน (หนองแด) และไอคอนแผนที่แบบพรีเมียม
 
 ## 📂 Project Structure
 
@@ -26,7 +27,7 @@
 src/
 ├── components/
 │   ├── layout/       # Navbar, Footer, ScrollToTop
-│   └── ui/           # SectionHeader, CountdownTimer
+│   └── ui/           # SectionHeader, CountdownTimer, FloatingParticles
 ├── hooks/            # useLanguage, useCountdown, useScrollAnimation
 ├── i18n/             # Translation files (th, en, zh) and Context Provider
 ├── pages/            # HomePage, AboutPage, ExhibitionPage, GalleryPage, MapPage
