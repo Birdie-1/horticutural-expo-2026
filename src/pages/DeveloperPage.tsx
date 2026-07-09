@@ -1,14 +1,14 @@
 import React from 'react';
 import SectionHeader from '@/components/ui/SectionHeader';
 import { useLanguage } from '@/hooks/useLanguage';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useScrollAnimationMultiple } from '@/hooks/useScrollAnimation';
 
 const DeveloperPage: React.FC = () => {
   const { t } = useLanguage();
-  useScrollAnimation();
+  const containerRef = useScrollAnimationMultiple();
 
   return (
-    <div className="pt-24 bg-dark-900 min-h-screen">
+    <div className="pt-24 bg-dark-900 min-h-screen" ref={containerRef}>
       {/* Hero Section */}
       <section className="py-16 lg:py-24 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
