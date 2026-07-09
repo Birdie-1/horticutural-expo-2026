@@ -27,12 +27,12 @@ const DeveloperPage: React.FC = () => {
               {/* Photo Column */}
               <div className="lg:col-span-2 relative h-[500px] md:h-auto overflow-hidden group">
                 <img 
-                  src="/images/profile.jpg" 
+                  src="images/profile.jpg" 
                   alt="Naruebordee Boonma" 
                   className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
-                    target.src = 'https://placehold.co/600x800/1a1a1a/d4af37?text=Profile+Photo\\n(Add+/images/profile.jpg)';
+                    target.src = 'https://placehold.co/600x800/1a1a1a/d4af37?text=Profile+Photo\\n(Add+images/profile.jpg)';
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/20 to-transparent opacity-90" />
