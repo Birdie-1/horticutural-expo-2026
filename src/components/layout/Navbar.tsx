@@ -9,6 +9,7 @@ const navItems = [
   { key: 'exhibition' as const, path: '/exhibition' },
   { key: 'gallery' as const, path: '/gallery' },
   { key: 'map' as const, path: '/map' },
+  { key: 'developer' as const, path: '/developer' },
 ];
 
 const languageLabels: Record<Language, string> = {

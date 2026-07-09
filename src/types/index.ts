@@ -61,6 +61,7 @@ export interface NavTranslations {
   exhibition: string;
   gallery: string;
   map: string;
+  developer: string;
 }
 
 export interface HomeTranslations {
@@ -241,6 +242,21 @@ export interface CommonTranslations {
   loading: string;
 }
 
+export interface DeveloperTranslations {
+  heroTitle: string;
+  heroSubtitle: string;
+  nameKey: string;
+  nameValue: string;
+  educationKey: string;
+  educationValue: string;
+  roleKey: string;
+  roleValue: string;
+  techStackKey: string;
+  contactKey: string;
+  github: string;
+  email: string;
+}
+
 export interface Translations {
   nav: NavTranslations;
   home: HomeTranslations;
@@ -249,6 +265,7 @@ export interface Translations {
   exhibition: ExhibitionTranslations;
   gallery: GalleryTranslations;
   map: MapTranslations;
+  developer: DeveloperTranslations;
   footer: FooterTranslations;
   common: CommonTranslations;
 }

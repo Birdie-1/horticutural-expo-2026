@@ -11,6 +11,7 @@ const AboutPage = lazy(() => import('@/pages/AboutPage'));
 const ExhibitionPage = lazy(() => import('@/pages/ExhibitionPage'));
 const GalleryPage = lazy(() => import('@/pages/GalleryPage'));
 const MapPage = lazy(() => import('@/pages/MapPage'));
+const DeveloperPage = lazy(() => import('@/pages/DeveloperPage'));
 
 function LoadingFallback() {
   return (
@@ -38,6 +39,7 @@ export default function App() {
                 <Route path="/exhibition" element={<ExhibitionPage />} />
                 <Route path="/gallery" element={<GalleryPage />} />
                 <Route path="/map" element={<MapPage />} />
+                <Route path="/developer" element={<DeveloperPage />} />
               </Routes>
             </Suspense>
           </div>

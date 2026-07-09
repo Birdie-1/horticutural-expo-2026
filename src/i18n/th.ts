@@ -7,6 +7,7 @@ export const th: Translations = {
     exhibition: 'โซนจัดแสดง',
     gallery: 'แกลเลอรี',
     map: 'แผนที่',
+    developer: 'ผู้พัฒนา',
   },
   home: {
     heroTitle: 'มหกรรมพืชสวนโลก',
@@ -160,6 +161,20 @@ export const th: Translations = {
     fromKhonKaenDesc: 'ขับรถยนต์ส่วนตัวหรือนั่งรถตู้โดยสาร ใช้เวลาเพียง 1.5 - 2 ชั่วโมง ตามเส้นทาง ถ.มิตรภาพ',
     fromNongKhai: 'จาก หนองคาย / เวียงจันทน์',
     fromNongKhaiDesc: 'ข้ามสะพานมิตรภาพไทย-ลาว และขับรถต่อเพียง 45 นาที (50 กิโลเมตร) สู่งานมหกรรม',
+  },
+  developer: {
+    heroTitle: 'ผู้พัฒนาเว็บไซต์',
+    heroSubtitle: 'ข้อมูลส่วนตัวและผลงานการพัฒนาเว็บไซต์',
+    nameKey: 'ชื่อ-นามสกุล',
+    nameValue: 'นฤบดี บุญมา (Naruebordee Boonma)',
+    educationKey: 'การศึกษา',
+    educationValue: 'สาขาเทคโนโลยีสารสนเทศ คณะวิทยาศาสตร์',
+    roleKey: 'บทบาท',
+    roleValue: 'Frontend Developer',
+    techStackKey: 'เทคโนโลยีที่ใช้พัฒนา',
+    contactKey: 'ช่องทางติดต่อ',
+    github: 'GitHub',
+    email: 'อีเมล',
   },
   footer: {
     about: 'เกี่ยวกับงาน',
